@@ -9,7 +9,7 @@ client = discord.Client()
 async def on_message(message):
      prefix="!"   
      if message.content.startswith(prefix + 'cat'):
-            @tasks.loop(seconds = 10) # repeat after every 10 seconds
+            @tasks.loop(minutes = 10) # repeat after every 10 seconds
             async def myLoop():
              response = requests.get('https://aws.random.cat/meow')
              data = response.json()
