@@ -48,15 +48,16 @@ async def on_message(message):
         data=response.json()
         await message.channel.send(data['message'])
     
-    #elif message.content.startswith(prefix + "av"):
-        #icon_url=message.author.avatar_url
-        #await message.channel.send(icon_url)
-    
+    elif message.content.startswith(prefix + "av"):
+        clientProfilePicture = message.author.avatar_url
+        await message.channel.send(clientProfilePicture)
 
+ 
     elif message.content.startswith(prefix +'embed'):
         embedVar = discord.Embed(title="Sex",url='https://anilist.co/user/Kratos31/', description="Chutad", color=0x00ff00)
         embedVar.set_thumbnail(url="https://i.imgur.com/axLm3p6.jpeg")
         await message.channel.send(embed=embedVar)
+
 
 
 
