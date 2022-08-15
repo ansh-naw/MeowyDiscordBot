@@ -9,6 +9,8 @@ from letterboxdpy import movie , user
 prefix="#"
 
 
+
+
 @client.event
 
 async def on_message(message):
@@ -37,10 +39,26 @@ async def on_message(message):
         else:
            anime_details=anilist.get_anime(anime_name)
            await message.channel.send(anime_details)
+        embedVar = discord.Embed(title=anime_details['name_romaji'],url='https://anilist.co/anime/21483/Seraph-of-the-End-Vampire-Reign--Owaranai-Seraph/', description=anime_details['desc'], color=0x00ff00)
+        embedVar.set_thumbnail(url=anime_details['cover_image'])
+        await message.channel.send(embed=embedVar)
     
     elif message.content.startswith(prefix + "dog"):
         response=requests.get('https://dog.ceo/api/breeds/image/random')
         data=response.json()
         await message.channel.send(data['message'])
-        
+    
+    #elif message.content.startswith(prefix + "av"):
+        #icon_url=message.author.avatar_url
+        #await message.channel.send(icon_url)
+    
+
+    elif message.content.startswith(prefix +'embed'):
+        embedVar = discord.Embed(title="Sex",url='https://anilist.co/user/Kratos31/', description="Chutad", color=0x00ff00)
+        embedVar.set_thumbnail(url="https://i.imgur.com/axLm3p6.jpeg")
+        await message.channel.send(embed=embedVar)
+
+
+
+
 client.run('ODg5MDY4Mzc0NzUwMDExNDAz.YUb3cg.PeualFHCwvkUPVv_VDoIgbeSqjw')
