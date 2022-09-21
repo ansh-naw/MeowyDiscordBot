@@ -17,4 +17,4 @@ letterboxdpy==2.1
 numpy==1.23.2
 lxml==4.9.1
 beautifulsoup4==4.11.1
-
+dotenv==16.0.0
