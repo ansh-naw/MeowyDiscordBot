@@ -9,10 +9,10 @@ from letterboxdpy import movie , user
 from dotenv import load_dotenv
 
 load_dotenv()
-
+Bot_Token=os.getenv("Bot_token")
 prefix="#"
 
-Bot_Token=os.getenv("Bot_token")
+
 @client.event
 
 async def on_message(message):
@@ -65,3 +65,4 @@ async def on_message(message):
 
 
 client.run(Bot_Token)
+
