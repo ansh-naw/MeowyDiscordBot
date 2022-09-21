@@ -4,13 +4,15 @@ from AnilistPython import Anilist
 anilist = Anilist() 
 from discord.ext import tasks
 client=discord.Client()
+import os
 from letterboxdpy import movie , user
+from dotenv import load_dotenv
+
+load_dotenv()
 
 prefix="#"
 
-
-
-
+Bot_Token=os.getenv("Bot_token")
 @client.event
 
 async def on_message(message):
@@ -62,4 +64,4 @@ async def on_message(message):
 
 
 
-client.run('BOT TOKEN GOES HERE')
+client.run(Bot_Token)
