@@ -62,4 +62,4 @@ async def on_message(message):
 
 
 
-client.run('ODg5MDY4Mzc0NzUwMDExNDAz.YUb3cg.PeualFHCwvkUPVv_VDoIgbeSqjw')
+client.run('BOT TOKEN GOES HERE')
